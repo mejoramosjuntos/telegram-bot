@@ -11,9 +11,9 @@ telegraf.start((ctx) => {
 let timer = null;
 
 timer = setInterval(() => {
-    if((new Date().getMinutes() % 3) === 0) {
+    if((new Date().getHours() % 3) === 0) {
         telegram.sendMessage('@MJ_prueba1', 'hola');    
     }
-}, 20000)  
+}, 3600000)  
 
 telegraf.launch()
